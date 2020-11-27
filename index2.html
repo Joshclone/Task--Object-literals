@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+
+<body>
+    <hr>
+    <p id="demo"></p>
+    <script>
+        //Object Constructor
+        // function person(first, last, age, eye)
+        class Person {
+            constructor(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+        }
+        let myFather = new Person("John", "Doe", 50, "blue");
+
+        let myMother = new Person("Sally", "Rally", 48, "green");
+
+        //  console.log(myMother.eyeColor);
+
+        document.getElementById("demo").innerHTML = `My father is  ${myFather.age}  , while My mother is  ${myMother.age}  .`;
+
+    </script>
+    <h4>Class Methods in ES6</h4>
+    <p id="methods"></p>
+    <script>
+        class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+
+            }
+            get area() {
+                return this.calArea();
+            }
+            calArea() {
+                return this.height * this.width;
+            }
+        }
+        const square = new Rectangle(5, 5);
+        //console.log(square.area);
+        document.getElementById("methods").innerHTML = square.area;
+
+
+    </script>
+
+
+</body>
+
+</html>

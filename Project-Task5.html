@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Object Literals</title>
+</head>
+
+<body>
+    <div>
+        <h4>A company is currently having their annual employee review of exercise, they've
+            successfully evaluated the performance of each employee, and they want to use as a
+            metric to determine the percentage increase in salary. They are taking the following I to
+            consideration;
+            a. Employees age.
+            b. Number of years an employee has spent at the company.
+            c. Performance score (1 - 10)
+        </h4>
+    </div>
+    <p>
+    <ul>
+
+        <li> Employees above 30 years automatically have a $100 increase, employees over
+            50years automatically have a $200 increase. While the percentage increase in salary
+            salary is calculated using the formula ( ( No of years / 10) * performance score).
+            So if a 40yr old employee current salary is $1000, and has spent 20years in the
+            company with a performance score of 5. His new salary would be calculated as follows;
+            %raise = (20 / 10) * 5
+            %raise = 10%
+            10% of $1000 = $100
+            Age bonus = $100
+            New salary => $1000 + $100 + $100 = $1,200.
+        </li>
+    </ul>
+    <p> Given an Object literal of people's name as key, and salary details (Object) as value,
+        Calculate the following;
+        a. New salary of all employees
+        b. A list of employees that got over 15% overall raise.
+        c. Overall payout increase by the company.
+
+    </p>
+    <div>
+        <ul>
+            <li> Example data
+                {
+                'alfred': {
+                age: 30,
+                years: 37,
+                performance: 7
+                },
+            </li>
+
+            <li>
+                'john': {
+                age: 55,
+                years: 26,
+                performance: 10
+                },
+
+            </li>
+            <li> 'joshua': {
+                age: 60,
+                years: 35,
+                performance: 9
+                },
+            </li>
+            <li> 'daniel': {
+                age: 30,
+                years: 5,
+                performance: 7
+                },
+                'jamie': {
+                age: 40,
+                years: 14,
+                performance: 6
+                }
+                }
+            </li>
+            <p> function companyRaiseData(data){
+                return {
+                salaries: [{employee name: salary}, {employeeName: salary}],
+                15raise: [Joshua, John],
+                overallPayoutIncrease: 15,000
+                }
+                }
+            </p>
+            <div> Hints
+                ● Google the use of Object.keys() and Object.values()
+                ● You might want to consider using arrays a lot.
+                Grading
+                Question 2a => 4 marks
+                Question 2b => 3marks</h4>
+            </div>
+</body>
+<hr>
+<p id="john"></p>
+
+<script src="script.js"></script>
+
+
+</html>

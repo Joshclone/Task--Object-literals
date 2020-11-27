@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals, Object Constructor</title>
+</head>
+<h2>Javascript Object Constructors
+</h2>
+<p id="de">
+
+</p>
+<hr>
+<p>
+    In JavaScript, Object can be created in primarily 2 ways. <br>
+
+    a. Using Object Literals <br>
+    b.Using Objects Constructors <br>
+    In not
+    more than 7 lines, explain the difference between Object Literals and Object constructors like you would to a 5
+    year old.
+</p>
+<div>
+    <ul>
+        <li>Object created using object Literals are <b>Singletons</b>, this means when a change is made to the object,
+            it affects the object entire script.</li>
+        <li>
+            Whereas if an object is created using constructor function and a change is made to it, that change won't
+            affect the object throughout the script.
+        </li>
+        <li>
+            <script>
+                var student = {
+                    name: "Ravi"
+                }
+                var newStudent = student;
+                document.write("Before change");
+                document.write("</br>");
+                document.write("student name = " + student.name);
+                document.write("</br>");
+                document.write("new student name = " + newStudent.name);
+                document.write("</br>");
+                newStudent.name = "Joshua";
+                document.write("<b>After change</b>");
+                document.write("</br>");
+                document.write("student name = " + student.name);
+                document.write("</br>");
+                document.write("new student name = " + newStudent.name);
+            </script>
+        </li>
+    </ul>
+    <div>
+        <ul>
+            <li>
+                Object defined with a function constructor lets you have multiple instances of that object. This means
+                change made to one instance, will not affect other instances
+            </li>
+            <li>It essentially boils down to if we need multiple instances of our object or not; object defined with a
+                constructor let us have multiple instances of that object. Object literals are basically singletons with
+                variables that are public </li>
+        </ul>
+    </div>
+</div>
+<script>
+    function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+
+    }
+    var myFather = new Person("John", "Doe", 50, "blue");
+
+    var myMother = new Person("Sally", "Rally", 48, "green");
+
+    document.getElementById("de").innerHTML = "My father is " + myFather.age + " . My mother is " + myMother.age + ".";
+
+
+</script>
+<hr>
+
+<body>
+
+</body>
+
+</html>
